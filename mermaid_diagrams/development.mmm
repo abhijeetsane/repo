@@ -1,0 +1,17 @@
+graph LR
+    Development[Application Development]  --> CodeRepo(Code Repository :  github or bitbucket )
+    Development --> AutomatedTests(Automated Testing / TDD)
+    Development --> ContinuousIntegration(Jenkins/CodeShip);
+    Development --> Jira(Jira based Ticket and Bug Tracking)
+    subgraph Code_Repository
+      CodeRepo --> CodeReview(Code Reviews)
+      CodeRepo --> CodeMerges(Code Merges  and Integration)
+      CodeRepo --> ContinuousIntegration
+    end
+
+    subgraph Jira_Project_Tracking
+      Jira --> TicketPriotitization(Ticket Prioritization)
+      Jira --> TicketAllocationAndTracking(Ticket Allocation and Tracking)
+      Jira --> EpicStorySpring(Sprint Tracking / Epic and Story Tracking)
+    end
+    ContinuousIntegration --> AutomatedTests

@@ -1,0 +1,3 @@
+graph LR
+    A[Database Query Facade]  --> B(Redis Cache Cluster)
+    A --> C(Content Management Database);

@@ -1,0 +1,38 @@
+graph LR
+  TechStack[Technology Stack] --> ProgLang[Programming Language]
+    TechStack --> Database[Database and Cache]
+    TechStack --> ServerSoftware[Server side Software <br> and <br> Frameworks]
+    TechStack --> ClientSideUI[Client Side UI]
+    TechStack --> CloudInfra[ Cloud Infrastructure]
+  subgraph ProgLang
+    ProgLang --> Java[Java]
+    ProgLang --> NodeJS[NodeJS]
+  end
+  subgraph Database
+    Database --> CouchDB[CouchDB NOSQL <br>Document Database]
+    Database --> Cassandra[Cassandra Column DB <br>Event log and Analytics]
+    Database --> Redis[Redis Cache]
+  end
+
+  subgraph ServerSoftware
+    ServerSoftware --> JavaServerSide[Akka , Play Framework  , Vert.X]
+    ServerSoftware --> NodeJSServerSide[HAPI , ExpressJS]
+  end 
+
+  subgraph ClientSideUI
+    ClientSideUI --> AngularJS[Angular JS]
+    ClientSideUI --> ReactJS[React JS]
+    ClientSideUI --> DustJS[DustJS Template Engine]
+    ClientSideUI --> SCSS[CSS extensions]
+    ClientSideUI --> NativeUI[Mobile Tablet Native UI]
+  end
+
+  subgraph CloudInfra
+    CloudInfra -->AmazonCloud[Amazon EC2 / Webservices ,<br> S3 Storage]
+    CloudInfra -->Containers[Containers]
+  end
+
+  subgraph Containers
+    Containers --> Docker[Docker]
+    Containers --> Kubernetes[Kubernetes Container Management UI]
+  end
